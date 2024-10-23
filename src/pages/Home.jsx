@@ -2,6 +2,7 @@ import Section from '../components/Section';
 import { Box, Grid, Card, CardContent, Typography, Button } from '@mui/material';
 import { Star } from '@mui/icons-material'; 
 import Bgimg from "../assets/bgimg1.png";
+import Logo from "../assets/logo.png"
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
         }}
       >
         <img 
-          src="../assets/logo.png" 
+          src={Logo}
           alt="LearnPath+ Logo" 
           style={{ 
             width: '180px', 
