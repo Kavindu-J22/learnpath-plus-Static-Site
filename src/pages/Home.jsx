@@ -124,7 +124,7 @@ const Home = () => {
               },
             ].map((successStory, index) => (
               <Grid item xs={12} sm={6} key={index}>
-                <Card sx={{ boxShadow: 3, borderRadius: '12px', display: 'flex', alignItems: 'center', padding: '20px' }}>
+                <Card sx={{ boxShadow: 3, borderRadius: '12px', display: 'flex', alignItems: 'center', padding: '20px', height: '100px',}}>
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     {successStory.icon}
                     <CardContent sx={{ flexGrow: 1 }}>
