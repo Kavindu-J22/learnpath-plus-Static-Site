@@ -25,7 +25,7 @@ const Home = () => {
         }}
       >
         <img 
-          src="../../public/assets/logo.png" 
+          src="../assets/logo.png" 
           alt="LearnPath+ Logo" 
           style={{ 
             width: '180px', 
