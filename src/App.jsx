@@ -58,7 +58,7 @@ const App = () => {
       >
         <Router>
           <Navbar />
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1 , pt: 8}}>
             <Container
               maxWidth="lg"
               sx={{
