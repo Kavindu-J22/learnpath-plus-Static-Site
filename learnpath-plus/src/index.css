@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
