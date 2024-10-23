@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import Section from '../components/Section';
 import { Box, Grid, Card, CardContent, Typography, Button } from '@mui/material';
 import { Star } from '@mui/icons-material'; 
@@ -155,7 +156,7 @@ const Home = () => {
         <Typography 
           variant="h4" 
           sx={{ 
-            color: '#4A90E2', 
+            color: 'rgb(23, 92, 117)', 
             marginBottom: '20px', 
             fontSize: { xs: '2rem', sm: '3rem' }, 
             fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // Updated font family

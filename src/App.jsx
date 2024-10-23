@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container, Box } from '@mui/material';
 import Navbar from './components/Navbar';
@@ -6,17 +8,18 @@ import Abstract from './pages/Abstract';
 import Methodology from './pages/Methodology';
 import Results from './pages/Results';
 import Conclusion from './pages/Conclusion';
-import AbuotUs from './pages/AboutUs';
+import AboutUs from './pages/AboutUs'; // Ensure the correct spelling
 import Footer from './components/Footer';
+import Loading from './components/Loading'; // Import the Loading component
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2', // Blue
+      main: '#1976d2',
     },
     secondary: {
-      main: '#dc004e', // Pink
+      main: '#dc004e',
     },
     background: {
       default: '#f5f5f5',
@@ -28,24 +31,39 @@ const theme = createTheme({
 });
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time (e.g., fetching data)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Change 3000 to the desired loading time in milliseconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loading />; // Show Loading component when loading
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          minHeight: '100vh', // Full height of the viewport
+          minHeight: '100vh',
           backgroundColor: theme.palette.background.default,
         }}
       >
         <Router>
           <Navbar />
-          <Box sx={{ flexGrow: 1 }}> {/* This box will push the footer down */}
-            <Container 
-              maxWidth="lg" 
-              sx={{ 
-                mt: 4, 
-                mb: 4, 
+          <Box sx={{ flexGrow: 1 }}>
+            <Container
+              maxWidth="lg"
+              sx={{
+                mt: 4,
+                mb: 4,
               }}
             >
               <Routes>
@@ -54,11 +72,11 @@ const App = () => {
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/results" element={<Results />} />
                 <Route path="/conclusion" element={<Conclusion />} />
-                <Route path="/aboutus" element={<AbuotUs />} />
+                <Route path="/aboutus" element={<AboutUs />} />
               </Routes>
             </Container>
           </Box>
-          <Footer /> {/* Footer will stay at the bottom */}
+          <Footer />
         </Router>
       </Box>
     </ThemeProvider>
