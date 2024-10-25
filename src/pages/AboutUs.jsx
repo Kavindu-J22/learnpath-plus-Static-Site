@@ -124,6 +124,7 @@ const AboutUs = () => {
           <FaUser />
           <h3>N.A.P.K.R. Nishshanka</h3>
           <p>Team Member | Dept. of Information Technology</p>
+          <p>IT21033032</p>
         </div>
 
         <div className="team-member">
@@ -131,6 +132,7 @@ const AboutUs = () => {
           <FaUser />
           <h3>K.A.K.N. Jayasinghe</h3>
           <p>Team Member | Dept. of Information Technology</p>
+          <p>IT21032806</p>
         </div>
 
         <div className="team-member">
@@ -138,6 +140,7 @@ const AboutUs = () => {
             <FaUser />
             <h3>N.A.G.A.A. Nishshanka</h3>
             <p>Team Member | Dept. of Information Technology</p>
+            <p>IT21032974</p>
           </div>
 
           <div className="team-member">
@@ -145,6 +148,7 @@ const AboutUs = () => {
             <FaUser />
             <h3>R.M.S.P. Abeykoon</h3>
             <p>Team Member | Dept. of Information Technology</p>
+            <p>IT21021602</p>
           </div>
 
         </div>

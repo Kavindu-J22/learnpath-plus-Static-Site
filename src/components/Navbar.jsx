@@ -10,13 +10,18 @@ import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import InfoIcon from '@mui/icons-material/Info';
+import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import logo from '../../public/assets/logo.png'; // Correct logo path
+import ArchitectureIcon from '@mui/icons-material/Architecture';
+import logo from '../../public/assets/logo.png'; 
+
 
 const Navbar = () => {
   const location = useLocation();
   const isMobile = useMediaQuery('(max-width:600px)');
   const [drawerOpen, setDrawerOpen] = useState(false);
+ 
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
@@ -29,10 +34,14 @@ const Navbar = () => {
 
   const menuItems = [
     { text: 'Home', path: '/', icon: <HomeIcon /> },
+    { text: 'objectives', path: '/objectives', icon: <AssignmentTurnedInIcon /> },
     { text: 'Abstract', path: '/abstract', icon: <DescriptionIcon /> },
+    { text: 'Literature Review', path: '/litaratureReview', icon: <MenuBookIcon /> },
     { text: 'Methodology', path: '/methodology', icon: <EmojiObjectsIcon /> },
+    { text: ' System Architecture', path: '/systemArchitecture', icon: <ArchitectureIcon /> },
     { text: 'Results', path: '/results', icon: <BarChartIcon /> },
     { text: 'Conclusion', path: '/conclusion', icon: <CheckCircleIcon /> },
+    { text: 'Documentations', path: '/documentations', icon: <InfoIcon /> },
     { text: 'About Us', path: '/aboutus', icon: <InfoIcon /> }
   ];
 
@@ -42,15 +51,18 @@ const Navbar = () => {
         <Container maxWidth="lg">
           <Toolbar>
             {/* Logo */}
+            <a href='/' style={{ marginRight: '10px' }}>
             <img 
               src={logo} 
               alt="LearnPath+ Logo" 
-              style={{ width: '40px', height: '40px', marginRight: '10px' }} 
+              style={{ width: '40px', height: '40px' }}
             />
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Roboto, sans-serif' }}>
+            </a>
+            <a href='/' style={{color:'#fff', textDecoration: 'none', flexGrow: 1}}>
+            <Typography variant="h6" component="div" sx={{ fontFamily: 'Roboto, sans-serif' }}>
               LearnPath+
             </Typography>
-
+            </a>
             {/* Menu items */}
             {isMobile ? (
               <>
@@ -106,7 +118,6 @@ const Navbar = () => {
                     component={Link} 
                     to={item.path} 
                     sx={buttonStyle(item.path)}
-                    startIcon={item.icon}
                   >
                     {item.text}
                   </Button>

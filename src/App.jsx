@@ -8,9 +8,13 @@ import Abstract from './pages/Abstract';
 import Methodology from './pages/Methodology';
 import Results from './pages/Results';
 import Conclusion from './pages/Conclusion';
-import AboutUs from './pages/AboutUs'; // Ensure the correct spelling
+import AboutUs from './pages/AboutUs';
+import LitaratureReview from './pages/LiteratureReview';
+import Objectives from './pages/Objectives';
+import SystemArchitecture from './pages/SystemArchitecture';
+import Documentations from './pages/Documentations';
 import Footer from './components/Footer';
-import Loading from './components/Loading'; // Import the Loading component
+import Loading from './components/Loading';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -73,6 +77,10 @@ const App = () => {
                 <Route path="/results" element={<Results />} />
                 <Route path="/conclusion" element={<Conclusion />} />
                 <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/litaratureReview" element={<LitaratureReview />} />
+                <Route path="/objectives" element={<Objectives />} />
+                <Route path="/systemArchitecture" element={<SystemArchitecture />} />
+                <Route path="/documentations" element={<Documentations />} />
               </Routes>
             </Container>
           </Box>
