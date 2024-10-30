@@ -212,16 +212,18 @@ const Home = () => {
         content={
           <Grid container spacing={2}>
             {[
-              { name: 'Nishshanka N.A.P.K.R', id: 'IT21033032' },
-              { name: 'Abeykoon R.M.S.P', id: 'IT21021602' },
-              { name: 'Jayasinghe K.A.K.N', id: 'IT21032806' },
-              { name: 'Nishshanka N.A.G.A.A', id: 'IT21032974' }
+              { name: 'Nishshanka N.A.P.K.R', id: 'IT21033032', mobile: '+94 71 291 5150', Email: 'it21033032@my.sliit.lk' },
+              { name: 'Abeykoon R.M.S.P', id: 'IT21021602', mobile: '+94 75 912 4951', Email: 'it21021602@my.sliit.lk' },
+              { name: 'Jayasinghe K.A.K.N', id: 'IT21032806', mobile: '+94 76 527 8729', Email: 'it21032806@my.sliit.lk' },
+              { name: 'Nishshanka N.A.G.A.A', id: 'IT21032974', mobile: '+94 71 689 7401', Email: 'it21032974@my.sliit.lk' }
             ].map((contact, index) => (
               <Grid item xs={12} sm={6} key={index}>
                 <Card sx={{ padding: '20px', borderRadius: '12px' }}>
                   <CardContent>
                     <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{contact.name}</Typography>
                     <Typography variant="body2">ID: {contact.id}</Typography>
+                    <Typography variant="body2">Contact: {contact.mobile}</Typography>
+                    <Typography variant="body2">E-mail: {contact.Email}</Typography>
                   </CardContent>
                 </Card>
               </Grid>
