@@ -102,7 +102,7 @@ function DocumentationPage() {
           { name: "Proposal Presentation", path: "/documents/Proposal_Presentation.pptx" },
           { name: "Progress Presentation 1", path: "/documents/Progress_Presentation_1.pptx" },
           { name: "Progress Presentation 2", path: "/documents/Progress_Presentation_2.pptx" },
-          { name: "Poster Preparation", path: "/documents/Poster_Preparation.pptx" },
+          { name: "Poster Preparation", path: "/documents/Poster_Preparation.ppt" },
           { name: "Final Presentation", path: "/documents/Final_Presentation.pptx" }
         ]} />
 
